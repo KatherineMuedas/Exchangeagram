@@ -14,13 +14,18 @@
 
   <!-- Begin rendering the form -->
   <div class= 'form-group'>
-    <%= f.input :title, 'Picture Title:' %><br>
+    <%= f.input :title %><br>
+  </div>
+
+  <div class= 'form-group'>
+    <%= f.input :photo %><br>
+  </div>
+
+  <div class= 'form-group'>
+    <%= f.input :description %><br>
   </div>
   <div class= 'form-group'>
-    <%= f.input :description, 'Picture Description:' %><br>
-  </div>
-  <div class= 'form-group'>
-   <%= f.input :category, collection: @categories, prompt: "Select the photo category" >
+   <%= f.input :category, collection: @categories, prompt: "Select the photo category" %>
    <br>
   </div>
 
