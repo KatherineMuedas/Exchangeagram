@@ -27,6 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem "paperclip", "~> 4.2"
 gem 'simple_form'
+gem 'foundation-rails'
 group :development do
   gem "better_errors"
   gem 'spring'
