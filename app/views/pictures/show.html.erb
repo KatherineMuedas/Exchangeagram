@@ -1,0 +1,17 @@
+h1><%= @picture.title %></h1>
+
+<h3>Description:</h3>
+<p><%= @picture.description %></p>
+
+<h3>category:</h3>
+<p><%= @project.category %></p>
+
+
+
+
+<%= link_to 'Home', root_path %> | 
+<%= link_to 'Edit', edit_project_path %> | 
+<%= link_to 'Delete', @project, method: :delete, 
+                                data: {
+                                  confirm: 'Are you sure you want to delete this project?'} %>
+<%= link_to 'Add New Task', new_project_task_path(@project) %>
