@@ -6,6 +6,44 @@
   color: white;
   padding: 0 15px; }
 
+.authform {
+  padding-top: 30px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.authform form {
+
+    padding-bottom: 60px;
+}
+.authform form a {
+  font-size: rem-calc(13);
+}
+.authform form p {
+  font-size: rem-calc(13);
+}
+.authform .form-group {
+  // for Bootstrap, not used for Foundation
+}
+.authform .form-control {
+  // for Bootstrap, not used for Foundation
+}
+.authform .checkbox {
+  // for Bootstrap, not used for Foundation
+}
+
+.authform #error_explanation {
+  @extend .alert-box;
+  @extend .alert;
+}
+.authform #error_explanation h2 {
+  font-size: rem-calc(16);
+  color: white;
+}
+.button-xs {
+  @extend .button;
+  @extend .radius;
+  @extend .tiny;
+}
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // This is the default html and body font-size for the base rem value.
