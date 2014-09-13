@@ -17,8 +17,10 @@
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
+      <div class= 'row'>
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+      </div>
     </main>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>
