@@ -5,4 +5,6 @@ class Picture < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 
   has_many :comments
+
+  validates :title, :description, :photo, presence: true
 end

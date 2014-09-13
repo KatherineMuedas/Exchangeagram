@@ -1,12 +1,13 @@
 class CommentsController < ApplicationController
-  before_action :find_photo, only: [:new, :create]
+  before_action :find_picture, only: [:new, :create]
 
   def create
-    @comment = @photo.comments.new(comments_params)
+    @comment = @picture.comments.new(comments_params)
     if @comment.save
-      redirect_to @photo
+      redirect_to picture_path(@picture)
     else
-      redirect_to :back, notice: 'Comment was not deleted'
+      redirect_to :back, notice: 'Comment was not created'
+    end
   end
 
   def destroy
@@ -16,11 +17,11 @@ class CommentsController < ApplicationController
 
   private
 
-  def comment_params
+  def comments_params
     params.require(:comment).permit(:body, :picture_id)
   end
 
-  def find_photo
-    @photo = Photo.find(params[:photo_id])
+  def find_picture
+    @picture = Picture.find(params[:picture_id])
   end
 end
