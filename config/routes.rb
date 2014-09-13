@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:show]
 
-  resources :pictures do
-    resources :comments
+  resources :pictures, except: [:edit, :update] do
+    resources :comments, only: [:create, :destroy]
   end
 root 'picture#index'
   # The priority is based upon order of creation: first created -> highest priority.

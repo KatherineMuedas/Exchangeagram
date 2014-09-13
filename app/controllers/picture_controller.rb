@@ -10,10 +10,11 @@ class PictureController < ApplicationController
   def create
     @picture = current_user.pictures.new(pictures_params)
  
-  if @picture.save
+    if @picture.save
     redirect_to root_path
-  else
+    else
     render 'new'
+    end
   end
   
   def show
