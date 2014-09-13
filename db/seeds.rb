@@ -6,7 +6,7 @@ puts "created #{user.email}"
  
 25.times do
   photo = open("http://placekitten.com/g/#{Random.rand(300..500)}/#{Random.rand(300..500)}")
-  photo = user.pictures.create(title: 'Awesome Photo', description: 'Awesome Description', photo: photo, category: 'cat')
+  photo = user.pictures.create(title: 'Awesome Photo', description: 'Awesome Description', photo: photo, category: 'Cat')
   puts "created photo for #{user.email}"
 end
  
@@ -18,6 +18,6 @@ end
 puts "created #{user.email}"
 25.times do
   photo = open("http://placekitten.com/g/#{Random.rand(300..500)}/#{Random.rand(300..500)}")
-  photo = user.pictures.create(title: 'Awesome Photo', description: 'Awesome Description', photo: photo, category: 'cat')
+  photo = user.pictures.create(title: 'Awesome Photo', description: 'Awesome Description', photo: photo, category: 'Cat')
   puts "created photo for #{user.email}"
 end
