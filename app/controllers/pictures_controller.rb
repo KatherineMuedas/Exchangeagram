@@ -22,6 +22,7 @@ class PicturesController < ApplicationController
   
   def show
     @picture = Picture.find(params[:id])
+    @comment = @picture.comment.build
   end
 
   def destroy
