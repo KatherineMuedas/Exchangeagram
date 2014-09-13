@@ -1,10 +1,6 @@
 <h1><%= @picture.title %></h1>
 
-<h3>Description:</h3>
-<p><%= @picture.description %></p>
-
-<h3>Category:</h3>
-<p><%= @picture.category %></p>
+<h3>Description: <small><%= @picture.description %></small></h3>
 
 <%= image_tag @picture.photo.url(:medium) %>
 <h3>Comments</h3>
