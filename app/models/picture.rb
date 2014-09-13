@@ -6,5 +6,5 @@ class Picture < ActiveRecord::Base
 
   has_many :comments
 
-  validates :title, :description, :photo, presence: true
+  validates :title, :description, :photo, :category, presence: true
 end
