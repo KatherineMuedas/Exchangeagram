@@ -22,12 +22,14 @@ class PicturesController < ApplicationController
   
   def show
     @picture = Picture.find(params[:id])
-    @comment = @picture.comment.build
+    @comment = @picture.comments.build
+    @comments = @picture.comments.all
   end
 
   def destroy
     @picture = Picture.find(params[:id])
     @picture.destroy
+    redirect_to root_url
   end
 
   private
