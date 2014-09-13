@@ -11,6 +11,7 @@ class PicturesController < ApplicationController
   end
 
   def create
+    @categories = ["Cat" , "Memes" , "Food"]
     @picture = current_user.pictures.new(pictures_params)
  
     if @picture.save

@@ -4,32 +4,5 @@
   <% end %>
 </ul>
 
-<table class='table table-hover'>
-  <thead>
-    <tr>
-      <th>Picture Title</th>
-      <th>Description</th>
-      <th>Category</th>
-      <th>Photo</th>
-
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pictures.each do |picture| %>
-      <tr>
-        <td><%= picture.title %></td>
-        <td><%= picture.description %></td>
-        <td><%= picture.category %></td>
-        <td><%= image_tag picture.photo.url(:medium) %></td>
-        <td><%= link_to 'Show', picture, class: 'btn btn-xs btn-default' %></td>
-        <td><%= link_to 'Destroy', picture, class: 'btn btn-xs btn-default', method: :delete, 
-                                            data: { 
-                                              confirm: 'Are you sure you want to delete this picture?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 
