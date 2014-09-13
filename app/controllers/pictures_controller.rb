@@ -5,6 +5,18 @@ class PicturesController < ApplicationController
     @pictures = Picture.all
   end
 
+  def cat_index
+    @pictures = Picture.where(category: "Cat" )
+  end
+
+  def memes_index
+    @pictures = Picture.where(category: "Memes" )
+  end
+
+  def food_index
+    @pictures = Picture.where(category: "Food" )
+  end
+
   def new
     @categories = ["Cat" , "Memes" , "Food"]
     @picture = current_user.pictures.new

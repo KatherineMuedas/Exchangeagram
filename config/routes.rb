@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   resources :pictures, except: [:edit, :update] do
     resources :comments, only: [:create, :destroy]
   end
+  get "/cats", to: "pictures#cat_index" , as: :cats
+  get "/memes", to: "pictures#memes_index" , as: :memes
+  get "/food", to: "pictures#food_index" , as: :food
 root 'pictures#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
